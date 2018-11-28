@@ -1,5 +1,7 @@
 /* eslint no-undefined: 0 */
 
+'use strict';
+
 const ENV = process.env;
 
 // We use BCDN_HEADERS to distinguish between production and debug CDN headers
@@ -9,7 +11,7 @@ const assert = require('assert').strict;
 const path = require('path');
 const semver = require('semver');
 const walk = require('fs-walk');
-const digest = require('../lib/helpers.js').sri.digest;
+const { digest } = require('../lib/helpers.js').sri;
 const helpers = require('./test_helpers.js');
 
 const config = helpers.getConfig();

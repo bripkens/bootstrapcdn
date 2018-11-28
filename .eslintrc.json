@@ -4,9 +4,6 @@
         "node": true,
         "es6": true
     },
-    "parserOptions": {
-        "sourceType": "module"
-    },
     "extends": "eslint:recommended",
     "rules": {
         "array-bracket-spacing": [
@@ -248,7 +245,13 @@
         ],
         "prefer-arrow-callback": "error",
         "prefer-const": "error",
-        "prefer-destructuring": "off",
+        "prefer-destructuring": [
+            "error",
+            {
+                "object": true,
+                "array": false
+            }
+        ],
         "prefer-spread": "error",
         "prefer-template": "error",
         "quote-props": [
